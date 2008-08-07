@@ -1,0 +1,21 @@
+This is a set of Python bindings for the program "Snarl".  Snarl was inspired by Growl
+for mac OSX and was written by Chris Peel.
+
+The module is PySnarl.  Inside this module there are functions for all the sn* functions
+in the snarl API.  This api can be found at:
+
+  	http://www.fullphat.net/developer/developerGuide/api/index.html
+  
+Using these functions is simple:
+
+	import PySnarl
+	if PySnarl.snGetVersion() != False:
+		(major, minor) = PySnarl.snGetVersion()
+		print "Found Snarl version",str(major)+"."+str(minor),"running."
+		PySnarl.snShowMessage("Test Message", "Hello World!")
+	else:
+		print "Sorry Snarl does not appear to be running"
+
+This can also be found in the example.py found in this directory.
+
+  
