@@ -1,0 +1,37 @@
+tcpsnarl
+========
+  Phillip Pearson <pp@myelin.co.nz>
+  http://github.com/myelin/tcpsnarl
+  http://www.myelin.co.nz/post/2008/8/7/#200808071
+
+A Python script to listen on port 10942 and forward any single-line
+messages it gets to a locally-running Snarl install.
+
+Dependencies
+============
+
+tcpsnarl requires either ctypes (included in Python 2.5) or pywin32.
+
+You will of course need Snarl: http://www.fullphat.net/
+
+Usage
+=====
+
+Change LISTEN_IP to the network interface you want to listen on, then
+run tcpsnarl.py.
+
+To send a message from a Linux box:
+
+  echo "this is a test" | nc 192.168.0.1 10942
+
+I do this inside a colinux VM that runs on my Windows XP laptop.
+
+License
+=======
+
+Apache License, v2.0.
+
+Acknowledgements
+================
+
+tcpsnarl includes PySnarl (src/pysnarl), Copyright 2006-2008 Samuel Listopad II.
