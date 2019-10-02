@@ -262,34 +262,34 @@ SNARL_NOTIFICATION_ACK           = 34   #notification was left-clicked by user
 #Snarl Test Message
 WM_SNARLTEST = myWin32Funcs.WM_USER + 237
 
-M_ABORTED           =   0x80000007L
-M_ACCESS_DENIED     =   0x80000009L
-M_ALREADY_EXISTS    =   0x8000000CL
-M_BAD_HANDLE        =   0x80000006L
-M_BAD_POINTER       =   0x80000005L
-M_FAILED            =   0x80000008L
-M_INVALID_ARGS      =   0x80000003L
-M_NO_INTERFACE      =   0x80000004L
-M_NOT_FOUND         =   0x8000000BL
-M_NOT_IMPLEMENTED   =   0x80000001L
-M_OK                =   0x00000000L
-M_OUT_OF_MEMORY     =   0x80000002L
-M_TIMED_OUT         =   0x8000000AL
+M_ABORTED           =   0x80000007
+M_ACCESS_DENIED     =   0x80000009
+M_ALREADY_EXISTS    =   0x8000000C
+M_BAD_HANDLE        =   0x80000006
+M_BAD_POINTER       =   0x80000005
+M_FAILED            =   0x80000008
+M_INVALID_ARGS      =   0x80000003
+M_NO_INTERFACE      =   0x80000004
+M_NOT_FOUND         =   0x8000000B
+M_NOT_IMPLEMENTED   =   0x80000001
+M_OK                =   0x00000000
+M_OUT_OF_MEMORY     =   0x80000002
+M_TIMED_OUT         =   0x8000000A
 
 ErrorCodeRev = {
-                    0x80000007L : "M_ABORTED",
-                    0x80000009L : "M_ACCESS_DENIED",
-                    0x8000000CL : "M_ALREADY_EXISTS",
-                    0x80000006L : "M_BAD_HANDLE",
-                    0x80000005L : "M_BAD_POINTER",
-                    0x80000008L : "M_FAILED",
-                    0x80000003L : "M_INVALID_ARGS",      
-                    0x80000004L : "M_NO_INTERFACE",     
-                    0x8000000BL : "M_NOT_FOUND",        
-                    0x80000001L : "M_NOT_IMPLEMENTED",  
-                    0x00000000L : "M_OK",               
-                    0x80000002L : "M_OUT_OF_MEMORY",    
-                    0x8000000AL : "M_TIMED_OUT"        
+                    0x80000007: "M_ABORTED",
+                    0x80000009 : "M_ACCESS_DENIED",
+                    0x8000000C : "M_ALREADY_EXISTS",
+                    0x80000006 : "M_BAD_HANDLE",
+                    0x80000005 : "M_BAD_POINTER",
+                    0x80000008 : "M_FAILED",
+                    0x80000003 : "M_INVALID_ARGS",
+                    0x80000004 : "M_NO_INTERFACE",
+                    0x8000000B : "M_NOT_FOUND",
+                    0x80000001 : "M_NOT_IMPLEMENTED",
+                    0x00000000 : "M_OK",
+                    0x80000002 : "M_OUT_OF_MEMORY",
+                    0x8000000A : "M_TIMED_OUT"
                 }
 
 class SnarlMessage(object):
@@ -536,7 +536,7 @@ Args:
                 return True
             else:
                 return idFromMsg
-        print "No snarl window found"
+        print("No snarl window found")
         return False
     
     def hide(self):
